@@ -112,7 +112,7 @@ class hosts (
   host { "${::fqdn}" :
     ensure       => $localhost_ensure,
     host_aliases => $my_fqdn_host_aliases,
-    ip           => '127.0.1.1',
+    ip           => '$::ipaddress',
   }
 
   host { 'localhost6.localdomain6':
